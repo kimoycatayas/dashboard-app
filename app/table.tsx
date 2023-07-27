@@ -10,9 +10,10 @@ import {
 
 interface User {
   id: number;
-  name: string;
   username: string;
   email: string;
+  first_name: string;
+  last_name: string;
 }
 
 export default async function UsersTable({ users }: { users: User[] }) {
@@ -28,7 +29,7 @@ export default async function UsersTable({ users }: { users: User[] }) {
       <TableBody>
         {users.map((user) => (
           <TableRow key={user.id}>
-            <TableCell>{user.name}</TableCell>
+            <TableCell>{`${user.first_name} ${user.last_name}`}</TableCell>
             <TableCell>
               <Text>{user.username}</Text>
             </TableCell>

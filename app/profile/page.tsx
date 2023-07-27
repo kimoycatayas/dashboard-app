@@ -1,6 +1,16 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import { queryBuilder } from '../../lib/planetscale';
 
-export default function Example() {
+export default async function Profile() {
+  const user = await queryBuilder
+    .selectFrom('users')
+    .selectAll()
+    .where('id', '=', 3)
+    .execute();
+
+    console.log(user.map((user) => user.id))
+
+
   return (
 
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
