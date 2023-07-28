@@ -2,7 +2,7 @@ import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 import Nav from './nav';
-import Toast from './toast';
+import Toast from './components/toast';
 import { Suspense } from 'react';
 
 export const metadata = {
