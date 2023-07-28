@@ -8,8 +8,6 @@ export default async function Profile() {
     .where('id', '=', 3)
     .execute();
 
-    console.log(user.map((user) => user.id))
-
 
   return (
 
